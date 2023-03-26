@@ -1,0 +1,12 @@
+---
+layout: default
+---
+
+<p class="view">by {{ page.author | default: site.author }}</p>
+<p><small>{{ page.date | date: "%-d %B %Y" }}</small></p>
+
+{{content}}
+
+{% if page.tags %}
+<small>tags: <em>{{ page.tags | join: "</em>, <em>" }}</em></small>
+{% endif %}

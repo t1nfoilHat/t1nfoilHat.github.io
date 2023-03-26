@@ -30,7 +30,7 @@ twitter_username: <link to how twitter brainwashes the masses>
 github_username:  t1nfoilHat
 
 # Build settings
-theme: jekyll-theme-hacker
+# theme: jekyll-theme-hacker
 
 plugins:
  - jekyll-feed

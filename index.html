@@ -1,75 +1,33 @@
-<!DOCTYPE html>
-<html lang="en-US">
+---
+layout: default
+title: What is my tinfoil hat deflecting?
+subtitle: ...and other reasons to build your bunker TODAY
+---
 
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/assets/css/style.css?v=4c942506cf8d5329a9cbc66b1eff75ad86a49e34">
-    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+<div class="container">
+    <section id="main_content">
 
-    <!-- Setup theme-color -->
-    <!-- start theme color meta headers -->
-    <meta name="theme-color" content="#151515">
-    <meta name="msapplication-navbutton-color" content="#151515">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <!-- end theme color meta headers -->
+        <h3>Very Important Information to have IN GENERAL</h3>
 
+        <p><a href="./sane-advice-for-the-insane/">Sane Advice for the Insane</a></p>
 
-    <!-- Setup Google Analytics -->
+        <p><a href="./bitfoots-corner/">Bitfoot's Corner</a></p>
 
+        <p><a href="./bill-cipher">An Image of Bill Cipher from Gravity Falls</a></p>
 
+        <br>
+        <br>
 
-    <!-- You can set your favicon here -->
-    <!-- link rel="shortcut icon" type="image/x-icon" href="/hacker/favicon.ico" -->
+        <h3>Very Important Information to have RIGHT NOW</h3>
 
-    <!-- end custom head snippets -->
-
-</head>
-
-<body>
-
-    <style>
-        #content {
-            position: relative;
-        }
-
-        #content img {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
-    </style>
-
-    <div id="content">
-        <a href="/">
-            <img src="/images/satellite_disk.webp" alt="home" height="40" />
-        </a>
-    </div>
-
-    <header>
-        <div class="container">
-            <h1>What is my tinfoil hat deflecting?</h1>
-            <h2>...and other reasons to build your bunker TODAY</h2>
+        {% for post in site.posts limit:3%}
+        <div class="post-preview">
+            <div class="post-preview__right">
+                <a class="preview-title" href="{{ post.url }}">{{ post.title }}</a>
+                <span>{{ post.date | date: "%b %d, %Y" }}</span>
+            </div>
         </div>
-    </header>
+        {% endfor %}
 
-    <div class="container">
-        <section id="main_content">
-
-            <p><a href="./bitfootsCorner/">Bitfoot's Corner</a></p>
-
-            <p><a href="./archive/">Archive</a></p>
-
-        </section>
-    </div>
-    <footer>
-        <div class="container">
-            <hr />
-            <p>If you are considering contacting me, please reconsider.</p>
-            <hr />
-        </div>
-    </footer>
-</body>
-
-</html>
+    </section>
+</div>
