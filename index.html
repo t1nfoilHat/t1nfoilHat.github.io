@@ -1,0 +1,36 @@
+---
+layout: default
+title: What is my tinfoil hat deflecting?
+subtitle: ...and other reasons to build your bunker TODAY
+---
+
+<div class="container">
+    <section id="main_content">
+
+        <h3>Very Important Information to have IN GENERAL</h3>
+
+        <p><a href="./sane-advice-for-the-insane">Sane Advice for the Insane</a></p>
+
+        <p><a href="./bitfoots-corner">Bitfoot's Corner</a></p>
+
+        <p><a href="./bill-cipher">An Image of Bill Cipher from Gravity Falls</a></p>
+
+        <p><a href="./you-are-going-to-break-the-illusion">DO NOT CLICK THIS LINK! IT WILL BREAK YOUR ENTIRE ILLUSION OF
+                REALITY!</a></p>
+
+        <br>
+        <br>
+
+        <h3>Very Important Information to have RIGHT NOW</h3>
+
+        {% for post in site.posts limit:3%}
+        <div class="post-preview">
+            <div class="post-preview__right">
+                <a class="preview-title" href="{{ post.url }}">{{ post.title }}</a>
+                <span>{{ post.date | date: "%b %d, %Y" }}</span>
+            </div>
+        </div>
+        {% endfor %}
+
+    </section>
+</div>
